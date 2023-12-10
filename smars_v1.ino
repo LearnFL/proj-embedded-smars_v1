@@ -1,6 +1,6 @@
 // This code has been written by Dennis Rotnov.
 // You are welcome to use this code and change it, but please keep authorship attribution.
-// Board: Raspverry pi pico
+// Board: Raspberry pi pico
 
 #define trigPin 14
 #define echoPin 15
