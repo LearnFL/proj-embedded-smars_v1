@@ -16,7 +16,7 @@ We utilized the Raspberry Pi Pico as it was readily available for our project. A
 7) 3d printed model
 
 # Video
-[Watch video on YouTube]()
+[Watch video on YouTube](https://youtube.com/shorts/sbUY9tzoYJg?feature=share)
 
 # Pictures
 ![3506BF33-EB88-46F1-B2C6-B0FBFA3EB994](https://github.com/LearnFL/pros-embedded-smars_v1/assets/86169204/f64f58b1-c251-4814-a226-46f2b1964827)
