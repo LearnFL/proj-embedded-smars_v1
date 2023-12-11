@@ -15,6 +15,22 @@ We utilized the Raspberry Pi Pico as it was readily available for our project. A
 6) 9v battery
 7) 3d printed model
 
+# How to put it all together
+1) Print 3d model and assemble it. [How to assemble the robot](https://www.instructables.com/SMARS-Robot-Arduino-Smart-Robot-Tank-Bluetooth/).
+2) Connect 9v battery to a buck converter.
+3) Connect buck converter (5v out) to pipico VSYS (vcc).
+4) Connect ground pin of pi pico to a ground pin of a buck converter. 
+5) Connect 9 v bettery to H-bridge.
+6) Connect pi pico pins 0, 1, to H-bridge in1 and in2.
+7) Connect pi pico pins 2, 3, to H-bridge in3 and in4.
+8) Connect motor A to H-bridge output for motor A.
+9) Connect motor B to H-bridge output for motor B.
+10) Connect ultrasonic sensor VCC to 5v output of a buck converter, connect ground terminal to a ground.
+11) Connect trigger pin and echo pin of an ultrasonic sensor to pins 14 and 15 of pi pico correspondingly.
+12) For convenience may add a switch for a positive terminal of 9v battery.
+
+If I missed anything please text me for clarifiactions. 
+    
 # Video
 [Watch video on YouTube](https://youtube.com/shorts/sbUY9tzoYJg?feature=share)
 
