@@ -1,6 +1,6 @@
 // This code has been written by Dennis Rotnov.
 // You are welcome to use this code and change it, but please keep authorship attribution.
-// Board: Raspberry pi pico
+// Board: Raspverry pi pico
 
 #define trigPin 14
 #define echoPin 15
@@ -34,9 +34,9 @@ int sendPing(){
   delayMicroseconds(10);
   digitalWrite(trigPin, 0);
   long duration = pulseIn(echoPin, HIGH); // Time in  micro seconds
-  int distance = duration * 0.034 / 2; // CM
-  Serial.print("Distance: ");
-  Serial.println(distance + "cm");
+  // int distance = duration * 0.034 / 2; // CM
+  int distance = (duration/2) / 29.1;
+  Serial.println(distance);
   return distance;
 } 
 
@@ -76,22 +76,28 @@ void stop(){
 }
 
 void randomDirectionChange(){
-  int randomDelay[] = {300, 500, 1000, 1500};
+  int randomDelay[] = {200, 300, 500, 700};
   // Temp = rand() % ( high - low + 1 ) + low 
-  int directionChoice = (rand() % 3);
+  int directionChoice = (rand() % 2);
   int delayChoice = (rand() % 4);
-  goBackward(150);
-  delay(1500);
+  goBackward(100);
+  delay(1000);
+
   if (directionChoice == 1){
     goLeft();
   } else {
     goRight();
   }
+
   delay(randomDelay[delayChoice]);
   stop();
 }
 
 /*
+v1 = rand() % 100;         // v1 in the range 0 to 99
+v2 = rand() % 100 + 1;     // v2 in the range 1 to 100
+v3 = rand() % 30 + 1985;   // v3 in the range 1985-2014
+
 https://howtomechatronics.com/tutorials/arduino/ultrasonic-sensor-hc-sr04/
 In order to generate the ultrasound we need to set the Trig pin on a High State for 10 µs. That will send out an 8 cycle ultrasonic 
 burst which will travel at the speed of sound. The Echo pins goes high right away after that 8 cycle ultrasonic burst is sent, and 
