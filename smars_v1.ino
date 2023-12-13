@@ -33,7 +33,9 @@ int sendPing(){
   digitalWrite(trigPin, 1);
   delayMicroseconds(10);
   digitalWrite(trigPin, 0);
-  long duration = pulseIn(echoPin, HIGH); // Time in  micro seconds
+  delayMicroseconds(70);
+  unsigned long duration = pulseIn(echoPin, HIGH); // Time in  micro seconds
+  delayMicroseconds(70);
   // int distance = duration * 0.034 / 2; // CM
   int distance = (duration/2) / 29.1;
   Serial.println(distance);
