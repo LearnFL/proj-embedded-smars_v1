@@ -30,7 +30,13 @@ We utilized the Raspberry Pi Pico as it was readily available for our project. A
 12) For convenience may add a switch for a positive terminal of 9v battery.
 
 If I missed anything please text me for clarifiactions. 
-    
+
+# Comments
+I have observed that the ultrasonic sensor has suddenly started malfunctioning and was no longer able to accurately measure distance. <br>
+Even small delays between measurements did not improve the situation. However, after lowering the buck converter to below 5 volts, <br> 
+the issue was resolved. It is possible that the switching power supply was causing interference with the sensor. I will confirm this later.<br>
+In addition, I have added a 0.1uF capacitor between the 5V and ground rails of the sensor to reduce noise.
+
 # Video
 [Watch video on YouTube](https://youtube.com/shorts/sbUY9tzoYJg?feature=share)
 
